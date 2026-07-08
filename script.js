@@ -79,7 +79,7 @@ document.querySelectorAll('.nav-item').forEach(item=>item.addEventListener('clic
   document.querySelectorAll('.nav-item').forEach(i=>i.classList.remove('active'));item.classList.add('active');
   const section=item.dataset.section;
   if(section==='calendar') document.getElementById('calendarSection').scrollIntoView({behavior:'smooth'});
-  else if(section==='requests') document.getElementById('requestsSection').scrollIntoView({behavior:'smooth'});
+  else if(section==='requests') window.location.href='leave-requests.html';
   else showToast(`${item.textContent.trim()} selected`);
   sidebar.classList.remove('open');
 }));
